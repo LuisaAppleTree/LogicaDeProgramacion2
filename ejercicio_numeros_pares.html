@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1>Números pares entre 1 y 100</h1>
+
+<script>
+    function saltarLinea () {
+        document.write("<br><hr>");
+    }
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    }
+
+    /*Programa para imprimir solo los números pares del 1 al 100.*/
+    let numeroLimite = 100;
+    let i = 1;
+    let numeroPar = 0;
+
+    while (i <= numeroLimite) {
+        if (i % 2 == 0) {
+            numeroPar = i;
+            imprimir(numeroPar);
+        }
+        i++
+    }
+
+    imprimir("Fin del programa");
+</script>

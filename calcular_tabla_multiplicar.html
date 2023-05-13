@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<h1>Calcular Tabla de Multiplicar</h1>
+
+<script>
+    function saltarLinea () {
+        document.write("<br><hr>");
+    }
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    }
+
+    /*Programa que nos permite multiplicar un número.*/
+    imprimir("Ciclo While");
+    let numTabla = parseInt(prompt("Ingresa el número del que deseas conocer su tabla de multiplicar."));
+    let multiplicador = 1;
+
+    while(multiplicador <= 10) {
+        imprimir(numTabla * multiplicador);
+        multiplicador ++
+    }
+
+    imprimir("Ciclo For");
+    let numTabla2 = parseInt(prompt("Ingresa otro número para calcular su tabla de multiplicar."));
+    for (let i = 1; i <= 10; i++) {
+        imprimir(numTabla2 * i);
+    }
+
+</script>

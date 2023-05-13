@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+
+    var usuarioRegistrado = "Luisa";
+    var passwordRegistrada = "seguridad1234";
+
+    let i = 0;
+    let intentos = 3;
+    while (i <= intentos) {
+        var usuarioIngresado = prompt("Ingrese su nombre de usuario");
+        var passwordIngresada = prompt("Ingrese su contraseña");
+        if (usuarioRegistrado == usuarioIngresado && passwordRegistrada == passwordIngresada) {
+            alert ("Bienvenido! " + usuarioIngresado);
+            break;
+        } else {
+            alert ("Inicio de sesión inválido. Favor intente de nuevo");
+        }
+        i++
+    }
+
+</script>

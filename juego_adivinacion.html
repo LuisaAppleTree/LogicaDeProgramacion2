@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<h1>Juego de adivinación</h1>
+
+<script>
+    function saltarLinea () {
+        document.write("<br><br><br><hr>");
+    }
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    }
+
+    /*Hacer un juego que solicite un número al usuario, el usuario debe 
+    asertar el número que esta en sistema (entre el 1 y el 10).*/
+    let rangoNum = parseInt(prompt("Ingresa el rango numérico con el que quieres jugar"));
+    let numero = Math.round(Math.random()*rangoNum);
+    let i = 3;
+    let numIntentos = 0;
+
+    while (i >= numIntentos) {
+        let numeroAdivinado = parseInt(prompt("Ingresa un número del 0 al " + rangoNum + " a ver si adivinas!"));
+            if (numeroAdivinado === numero) {
+            alert("Acertaste el número! Te quedaban aún " + i + " intentos!");
+            break;
+        } else if (numeroAdivinado != numero && numeroAdivinado <= rangoNum){
+            if (numero < numeroAdivinado) {
+                alert("El número que ingresaste es mayor que el número secreto, te quedan " + i + " intentos");
+            } else {
+                alert("El número que ingresaste es menor que el número secreto, te quedan " + i + " intentos");
+            }
+        } else {
+            alert("El número debe ser entre 0 y " + rangoNum);
+        }
+        i--
+    }
+</script>

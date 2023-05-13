@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h1>Estrellas</h1>
+
+<script>
+    function saltarLinea () {
+        document.write("<br><hr>");
+    }
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    }
+
+    /*Hacer un programa que imprima una matriz formada 
+    por asteriscos de 10 x 3 (10 columnas, 3 líneas.*/
+    for (lineas = 1; lineas <= 3; lineas++) {
+
+        for (columnas = 1; columnas <= 10; columnas++) {
+            document.write("<big>*</big>");
+        }
+        saltarLinea();
+    }
+   
+</script>

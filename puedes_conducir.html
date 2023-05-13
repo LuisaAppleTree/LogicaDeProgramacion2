@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1>¿Puedes manejar un vehículo?</h1>
+
+<script>
+    function saltarLinea () {
+        document.write("<br><br><br><hr>");
+    }
+
+    function imprimir (mensaje) {
+        document.write(mensaje);
+        saltarLinea();
+    }
+
+    /*programa que determina si una persona puede conducir un vehículo
+    para ello debe tener 18 o más años de edad y licencia de conducir*/
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    if ((edad >= 18) && (tieneLicencia == "S")) {
+        imprimir("Puedes conducir :D");
+    } else if (edad < 18 ) {
+        imprimir("Aún eres menor de edad, sorry.");
+    } else {
+        imprimir ("No tienes licencia, por lo que no puedes conducir.");
+    }
+</script>
